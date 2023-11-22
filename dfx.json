@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "solid_winner_backend": {
+      "main": "src/solid_winner_backend/main.mo",
+      "type": "motoko"
+    },
+    "solid_winner_frontend": {
+      "dependencies": [
+        "solid_winner_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/solid_winner_frontend/src/index.html"
+      },
+      "source": [
+        "src/solid_winner_frontend/assets",
+        "dist/solid_winner_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
